@@ -4,7 +4,6 @@ import com.jojoldu.book.springboot.domain.user.Role;
 import com.jojoldu.book.springboot.domain.user.User;
 import lombok.Builder;
 import lombok.Getter;
-import org.springframework.context.annotation.Bean;
 
 import java.util.Map;
 
