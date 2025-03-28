@@ -130,28 +130,6 @@ class PostsApiControllerTest {
         assertThat(all.get(0).getContent()).isEqualTo(expectedContent);
 
     }
-
-    @Test
-    void BaseTimeEntity_등록() throws Exception{
-        // given
-        LocalDateTime now = LocalDateTime.of(2025,3,20,0,0,0);
-        postsRepository.save(Posts.builder()
-                .title("title")
-                .author("author")
-                .content("content")
-                .build());
-
-        // when
-        List<Posts> postsList = postsRepository.findAll();
-
-        // then
-        Posts posts = postsList.get(0);
-
-        System.out.println("posts.getCreateDate() = " + posts.getCreateDate().toString());
-
-        assertThat(posts.getCreateDate()).isAfter(now);
-        assertThat(posts.getModifiedDate()).isAfter(now);
-    }
 }
 
 
