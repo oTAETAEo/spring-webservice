@@ -22,6 +22,6 @@ class IndexControllerTest {
     void 메인_페이지_로딩() throws Exception {
         // given when then
         mockMvc.perform(get("/"))
-                .andExpect(content().string(containsString("스프링 부트로 시작하는 웹 서비스")));
+                .andExpect(content().string(containsString("스프링부트로 시작하는 웹 서비스 Ver.2")));
     }
 }
