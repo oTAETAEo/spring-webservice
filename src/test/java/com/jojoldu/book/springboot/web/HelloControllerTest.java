@@ -22,7 +22,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  *               하지만 보안 설정이 활성화되거나 인증 관련 로직이 추가되면 예외가 발생할 수 있으므로, excludeFilters를 명시해두는 것이 안전함. ✅
  */
 @WebMvcTest(value = HelloController.class , excludeFilters = {@ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = SecurityConfig.class)})
-@TestPropertySource(locations = "classpath:application-test.properties")
 class HelloControllerTest {
 
     @Autowired
